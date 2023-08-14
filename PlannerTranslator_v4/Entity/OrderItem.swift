@@ -1,17 +1,22 @@
 import Foundation
 
+struct SectionOrdersItem {
+    var orders: [OrderItem] = []
+    var date: Date
+}
+
 class OrderItem {
-    var name: String
+    var name: String = ""
     var price: Double?
-    var deadline: Date?
+    var deadline: String?
     var customer: String?
     var made: Bool?
     var comment: String?
     var link: String?
     
-    init(name: String,
+    init(name: String = "",
         price: Double?,
-        deadline: Date?,
+        deadline: String?,
         customer: String?,
         made: Bool?,
         comment: String?,

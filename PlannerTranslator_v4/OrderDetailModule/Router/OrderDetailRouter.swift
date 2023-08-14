@@ -1,6 +1,7 @@
 import UIKit
 
 class OrderDetailRouter: OrderDetailRouterProtocol {
+
     
     func navigateBackToListViewController(from view: OrderDetailViewProtocol) {
         guard let viewVC = view as? UIViewController else {
@@ -9,7 +10,8 @@ class OrderDetailRouter: OrderDetailRouterProtocol {
         viewVC.navigationController?.popViewController(animated: true)
     }
     
-    static func createOrderDetailRouterModule(with order: OrderItem) -> UIViewController {
+    static func createOrderDetailRouterModule(with order: OrderItem,
+                                              outputPresenter: OrderDetailPresenterOutputProtocol) -> UIViewController {
         
         let orderDetailVC = OrderDetailViewController()
         let presenter: OrderDetailPresenter & OrderDetailInteractorOutputProtocol = OrderDetailPresenter()

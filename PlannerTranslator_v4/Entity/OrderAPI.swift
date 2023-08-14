@@ -7,13 +7,13 @@ class OrderAPI {
     
     public private(set) var orders: [OrderItem] = [
 //        name: String, price: Int?, deadline: Date?, customer: String, paid: Bool?, comment:String?
-        OrderItem(name: "Moya and AirTable in iOS-app", price: 300, deadline: OrderAPI.createTestDate(value: "2023-01-08"), customer: "proglib", made: true, comment: "111", link: "http"),
+        OrderItem(name: "Moya and AirTable in iOS-app", price: 300, deadline: "2023-01-08", customer: "proglib", made: false, comment: "111", link: "http"),
         
-        OrderItem(name: "VIPER in iOS", price: 200, deadline: OrderAPI.createTestDate(value: "2023-01-08"),  customer: "proglib", made: true, comment: "111", link: "http"),
+        OrderItem(name: "VIPER in iOS", price: 200, deadline: "2023-01-08",  customer: "proglib", made: false, comment: "111", link: "http"),
         
-        OrderItem(  name: "MVVM in iOS", price: 123, deadline: OrderAPI.createTestDate(value: "2023-01-09"), customer: "medium", made: true, comment: "111", link: "http"),
+        OrderItem(  name: "MVVM in iOS", price: 123, deadline: "2023-01-08", customer: "medium", made: false, comment: "111", link: "http"),
         
-        OrderItem(name: "How to make good apps", price: 32, deadline: OrderAPI.createTestDate(value: "2023-01-12"),  customer: "medium", made: true, comment: "111", link: "http"),
+        OrderItem(name: "How to make good apps", price: 32, deadline: "2023-01-08",  customer: "medium", made: false, comment: "111", link: "http"),
         
     ]
     

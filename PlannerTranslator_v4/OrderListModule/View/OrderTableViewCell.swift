@@ -1,7 +1,6 @@
 import UIKit
 
 class OrderTableViewCell: UITableViewCell {
-    
     var order: OrderItem? {
         didSet {
             guard let orderItem = order else {return}

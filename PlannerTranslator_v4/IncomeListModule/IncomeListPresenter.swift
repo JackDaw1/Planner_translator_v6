@@ -29,12 +29,12 @@ extension IncomeListPresenter: IncomeListInteractorOutputProtocol {
         }
         
         var sectionsResult = [SectionIncomesItem]()
-        var currentDate = incomes.first?.deadline ?? Date()
+        var currentDate = incomes.first?.deadline?.toDate() ?? Date()
         var sectionItem: SectionIncomesItem = SectionIncomesItem(date: currentDate)
         for income in array {
-            if let deadline = income.deadline, abs(deadline.timeIntervalSince(currentDate)) > 24*60*59 {
+            if let deadline = income.deadline?.toDate(), abs(deadline.timeIntervalSince(currentDate)) > 24*60*59 {
                 sectionsResult.append(sectionItem)
-                currentDate = income.deadline ?? Date()
+                currentDate = income.deadline?.toDate() ?? Date()
                 sectionItem = SectionIncomesItem(date: currentDate)
                 sectionItem.incomes.append(income)
             } else {

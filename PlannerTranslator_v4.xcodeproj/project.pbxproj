@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE32C6302A8A39F200224D0D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C62F2A8A39F200224D0D /* Helper.swift */; };
 		FE91B1B6296564900063ED03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91B1B5296564900063ED03 /* AppDelegate.swift */; };
 		FE91B1B8296564900063ED03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91B1B7296564900063ED03 /* SceneDelegate.swift */; };
 		FE91B1BD296564900063ED03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE91B1BB296564900063ED03 /* Main.storyboard */; };
@@ -27,7 +28,6 @@
 		FE95530929668EBD001CE332 /* OrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95530829668EBD001CE332 /* OrderAPI.swift */; };
 		FE95530B296697A4001CE332 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95530A296697A4001CE332 /* OrderTableViewCell.swift */; };
 		FE95530D2966A036001CE332 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE95530C2966A036001CE332 /* AddOrderViewController.swift */; };
-		FE9553352967F208001CE332 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9553342967F208001CE332 /* Helper.swift */; };
 		FEE6ECB92A86A37C003DA1F6 /* ProfileDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6ECB82A86A37C003DA1F6 /* ProfileDetailRouter.swift */; };
 		FEE6ECBC2A86A3A6003DA1F6 /* ProfileDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6ECBB2A86A3A6003DA1F6 /* ProfileDetailInteractor.swift */; };
 		FEE6ECBE2A86A3CF003DA1F6 /* ProfileDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6ECBD2A86A3CF003DA1F6 /* ProfileDetailProtocols.swift */; };
@@ -61,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE32C62F2A8A39F200224D0D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FE91B1B2296564900063ED03 /* PlannerTranslator_v4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerTranslator_v4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE91B1B5296564900063ED03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE91B1B7296564900063ED03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		FE95530829668EBD001CE332 /* OrderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderAPI.swift; sourceTree = "<group>"; };
 		FE95530A296697A4001CE332 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		FE95530C2966A036001CE332 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
-		FE9553342967F208001CE332 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FEE6ECB82A86A37C003DA1F6 /* ProfileDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailRouter.swift; sourceTree = "<group>"; };
 		FEE6ECBB2A86A3A6003DA1F6 /* ProfileDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractor.swift; sourceTree = "<group>"; };
 		FEE6ECBD2A86A3CF003DA1F6 /* ProfileDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailProtocols.swift; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 				FE91B1E82965657A0063ED03 /* Entity */,
 				FE9552F129668E1A001CE332 /* MainTabbarViewController.swift */,
 				FE91B1B5296564900063ED03 /* AppDelegate.swift */,
+				FE32C62F2A8A39F200224D0D /* Helper.swift */,
 				FE91B1B7296564900063ED03 /* SceneDelegate.swift */,
-				FE9553342967F208001CE332 /* Helper.swift */,
 				FE91B1BB296564900063ED03 /* Main.storyboard */,
 				FE91B1C1296564910063ED03 /* Assets.xcassets */,
 				FE91B1C3296564910063ED03 /* LaunchScreen.storyboard */,
@@ -451,6 +451,7 @@
 				FEE6ECC92A86A55B003DA1F6 /* IncomeListRouter.swift in Sources */,
 				FE9552FD29668E1A001CE332 /* OrderListPresenter.swift in Sources */,
 				FE95530229668E1A001CE332 /* MainTabbarViewController.swift in Sources */,
+				FE32C6302A8A39F200224D0D /* Helper.swift in Sources */,
 				FEE6ECC42A86A4BA003DA1F6 /* ProfileItem.swift in Sources */,
 				FEE6ECD12A86A5B2003DA1F6 /* IncomeListInteractor.swift in Sources */,
 				FEE6ECCF2A86A5A0003DA1F6 /* IncomeListViewController.swift in Sources */,
@@ -464,7 +465,6 @@
 				FEE6ECBC2A86A3A6003DA1F6 /* ProfileDetailInteractor.swift in Sources */,
 				FEE6ECCD2A86A589003DA1F6 /* IncomeTableViewCell.swift in Sources */,
 				FEE6ECC22A86A405003DA1F6 /* ProfileDetailPresenter.swift in Sources */,
-				FE9553352967F208001CE332 /* Helper.swift in Sources */,
 				FE95530529668E1A001CE332 /* OrderDetailProtocols.swift in Sources */,
 				FE91B1B8296564900063ED03 /* SceneDelegate.swift in Sources */,
 				FE9552FE29668E1A001CE332 /* OrderListViewController.swift in Sources */,
