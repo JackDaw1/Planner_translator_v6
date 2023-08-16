@@ -29,18 +29,18 @@ class MainTabBarController: UITabBarController {
                 title: "Заказы",
                 image: UIImage(systemName: "list.bullet.clipboard")!
             ),
-//            createNavController(
-//                for: CustomerListRouter.createCustomerListModule(),
-//                title: "Заказчики",
-//                image: UIImage(systemName: "person.2")!
-//            ),
+            createNavController(
+                for: CustomerListRouter.createCustomerListModule(),
+                title: "Заказчики",
+                image: UIImage(systemName: "person.2")!
+            ),
             createNavController(
                 for: IncomeListRouter.createIncomeListModule(),
                 title: "Смета",
                 image: UIImage(systemName: "chart.line.uptrend.xyaxis")!
             ),
             createNavController(
-                for: ProfileDetailRouter.createProfileDetailRouterModule(),
+                for: ProfileDetailViewController(),
                 title: "Профиль",
                 image: UIImage(systemName: "person.crop.circle")!
             )

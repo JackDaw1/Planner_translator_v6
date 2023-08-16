@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		FE32C6302A8A39F200224D0D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C62F2A8A39F200224D0D /* Helper.swift */; };
+		FE32C6332A8B91DA00224D0D /* CustomerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6322A8B91DA00224D0D /* CustomerListRouter.swift */; };
+		FE32C6352A8B920900224D0D /* CustomerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6342A8B920900224D0D /* CustomerListInteractor.swift */; };
+		FE32C6372A8B922E00224D0D /* CustomerListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6362A8B922E00224D0D /* CustomerListProtocols.swift */; };
+		FE32C63A2A8B927200224D0D /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6392A8B927200224D0D /* CustomerListViewController.swift */; };
+		FE32C63C2A8B928B00224D0D /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C63B2A8B928B00224D0D /* CustomerTableViewCell.swift */; };
+		FE32C63E2A8B92A000224D0D /* AddCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C63D2A8B92A000224D0D /* AddCustomerViewController.swift */; };
+		FE32C6402A8B92D000224D0D /* CustomerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C63F2A8B92D000224D0D /* CustomerListPresenter.swift */; };
+		FE32C6432A8B930100224D0D /* CustomerDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6422A8B930100224D0D /* CustomerDetailRouter.swift */; };
+		FE32C6462A8B931900224D0D /* CustomerDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6452A8B931900224D0D /* CustomerDetailInteractor.swift */; };
+		FE32C6482A8B932C00224D0D /* CustomerDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6472A8B932C00224D0D /* CustomerDetailProtocols.swift */; };
+		FE32C64A2A8B935C00224D0D /* CustomerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C6492A8B935C00224D0D /* CustomerDetailViewController.swift */; };
+		FE32C64C2A8B93F700224D0D /* CustomerDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C64B2A8B93F700224D0D /* CustomerDetailPresenter.swift */; };
+		FE32C64E2A8B941B00224D0D /* CustomerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C64D2A8B941B00224D0D /* CustomerItem.swift */; };
+		FE32C6502A8B942600224D0D /* CustomerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32C64F2A8B942600224D0D /* CustomerAPI.swift */; };
 		FE91B1B6296564900063ED03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91B1B5296564900063ED03 /* AppDelegate.swift */; };
 		FE91B1B8296564900063ED03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91B1B7296564900063ED03 /* SceneDelegate.swift */; };
 		FE91B1BD296564900063ED03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE91B1BB296564900063ED03 /* Main.storyboard */; };
@@ -62,6 +76,20 @@
 
 /* Begin PBXFileReference section */
 		FE32C62F2A8A39F200224D0D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FE32C6322A8B91DA00224D0D /* CustomerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListRouter.swift; sourceTree = "<group>"; };
+		FE32C6342A8B920900224D0D /* CustomerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListInteractor.swift; sourceTree = "<group>"; };
+		FE32C6362A8B922E00224D0D /* CustomerListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListProtocols.swift; sourceTree = "<group>"; };
+		FE32C6392A8B927200224D0D /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
+		FE32C63B2A8B928B00224D0D /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
+		FE32C63D2A8B92A000224D0D /* AddCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerViewController.swift; sourceTree = "<group>"; };
+		FE32C63F2A8B92D000224D0D /* CustomerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListPresenter.swift; sourceTree = "<group>"; };
+		FE32C6422A8B930100224D0D /* CustomerDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailRouter.swift; sourceTree = "<group>"; };
+		FE32C6452A8B931900224D0D /* CustomerDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailInteractor.swift; sourceTree = "<group>"; };
+		FE32C6472A8B932C00224D0D /* CustomerDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailProtocols.swift; sourceTree = "<group>"; };
+		FE32C6492A8B935C00224D0D /* CustomerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewController.swift; sourceTree = "<group>"; };
+		FE32C64B2A8B93F700224D0D /* CustomerDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailPresenter.swift; sourceTree = "<group>"; };
+		FE32C64D2A8B941B00224D0D /* CustomerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerItem.swift; sourceTree = "<group>"; };
+		FE32C64F2A8B942600224D0D /* CustomerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAPI.swift; sourceTree = "<group>"; };
 		FE91B1B2296564900063ED03 /* PlannerTranslator_v4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerTranslator_v4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE91B1B5296564900063ED03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE91B1B7296564900063ED03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +154,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE32C6312A8B91B700224D0D /* CustomerListModule */ = {
+			isa = PBXGroup;
+			children = (
+				FE32C6382A8B926200224D0D /* View */,
+				FE32C6322A8B91DA00224D0D /* CustomerListRouter.swift */,
+				FE32C6342A8B920900224D0D /* CustomerListInteractor.swift */,
+				FE32C6362A8B922E00224D0D /* CustomerListProtocols.swift */,
+				FE32C63F2A8B92D000224D0D /* CustomerListPresenter.swift */,
+			);
+			path = CustomerListModule;
+			sourceTree = "<group>";
+		};
+		FE32C6382A8B926200224D0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE32C6392A8B927200224D0D /* CustomerListViewController.swift */,
+				FE32C63B2A8B928B00224D0D /* CustomerTableViewCell.swift */,
+				FE32C63D2A8B92A000224D0D /* AddCustomerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE32C6412A8B92E500224D0D /* CustomerDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				FE32C6422A8B930100224D0D /* CustomerDetailRouter.swift */,
+				FE32C6452A8B931900224D0D /* CustomerDetailInteractor.swift */,
+				FE32C6472A8B932C00224D0D /* CustomerDetailProtocols.swift */,
+				FE32C6492A8B935C00224D0D /* CustomerDetailViewController.swift */,
+				FE32C64B2A8B93F700224D0D /* CustomerDetailPresenter.swift */,
+			);
+			path = CustomerDetailModule;
+			sourceTree = "<group>";
+		};
 		FE91B1A9296564900063ED03 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +209,8 @@
 		FE91B1B4296564900063ED03 /* PlannerTranslator_v4 */ = {
 			isa = PBXGroup;
 			children = (
+				FE32C6412A8B92E500224D0D /* CustomerDetailModule */,
+				FE32C6312A8B91B700224D0D /* CustomerListModule */,
 				FEE6ECC72A86A542003DA1F6 /* IncomeListModule */,
 				FEE6ECB62A86A352003DA1F6 /* ProfileDetailRouter */,
 				FE9552E629668E1A001CE332 /* OrderListModule */,
@@ -171,6 +235,8 @@
 				FE95530829668EBD001CE332 /* OrderAPI.swift */,
 				FEE6ECC32A86A4BA003DA1F6 /* ProfileItem.swift */,
 				FEE6ECC52A86A4C3003DA1F6 /* ProfileAPI.swift */,
+				FE32C64D2A8B941B00224D0D /* CustomerItem.swift */,
+				FE32C64F2A8B942600224D0D /* CustomerAPI.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -439,35 +505,49 @@
 			files = (
 				FE95530729668E1A001CE332 /* OrderDetailRouter.swift in Sources */,
 				FE95530629668E1A001CE332 /* OrderDetailInteractor.swift in Sources */,
+				FE32C6332A8B91DA00224D0D /* CustomerListRouter.swift in Sources */,
 				FE95530429668E1A001CE332 /* OrderDetailViewController.swift in Sources */,
 				FEE6ECC02A86A3F1003DA1F6 /* ProfileDetailViewController.swift in Sources */,
 				FE95530929668EBD001CE332 /* OrderAPI.swift in Sources */,
+				FE32C63E2A8B92A000224D0D /* AddCustomerViewController.swift in Sources */,
 				FE9552FF29668E1A001CE332 /* OrderListProtocols.swift in Sources */,
+				FE32C6352A8B920900224D0D /* CustomerListInteractor.swift in Sources */,
 				FE95530D2966A036001CE332 /* AddOrderViewController.swift in Sources */,
 				FEE6ECC62A86A4C3003DA1F6 /* ProfileAPI.swift in Sources */,
 				FEE6ECB92A86A37C003DA1F6 /* ProfileDetailRouter.swift in Sources */,
 				FE95530029668E1A001CE332 /* OrderListInteractor.swift in Sources */,
+				FE32C63A2A8B927200224D0D /* CustomerListViewController.swift in Sources */,
 				FE95530B296697A4001CE332 /* OrderTableViewCell.swift in Sources */,
 				FEE6ECC92A86A55B003DA1F6 /* IncomeListRouter.swift in Sources */,
 				FE9552FD29668E1A001CE332 /* OrderListPresenter.swift in Sources */,
+				FE32C6372A8B922E00224D0D /* CustomerListProtocols.swift in Sources */,
+				FE32C6402A8B92D000224D0D /* CustomerListPresenter.swift in Sources */,
 				FE95530229668E1A001CE332 /* MainTabbarViewController.swift in Sources */,
 				FE32C6302A8A39F200224D0D /* Helper.swift in Sources */,
 				FEE6ECC42A86A4BA003DA1F6 /* ProfileItem.swift in Sources */,
 				FEE6ECD12A86A5B2003DA1F6 /* IncomeListInteractor.swift in Sources */,
 				FEE6ECCF2A86A5A0003DA1F6 /* IncomeListViewController.swift in Sources */,
 				FEE6ECD32A86A5CA003DA1F6 /* IncomeListPresenter.swift in Sources */,
+				FE32C6462A8B931900224D0D /* CustomerDetailInteractor.swift in Sources */,
+				FE32C63C2A8B928B00224D0D /* CustomerTableViewCell.swift in Sources */,
 				FEE6ECCB2A86A56F003DA1F6 /* IncomeListProtocols.swift in Sources */,
 				FE9552E329667974001CE332 /* OrderItem.swift in Sources */,
 				FE95530129668E1A001CE332 /* OrderListRouter.swift in Sources */,
+				FE32C64C2A8B93F700224D0D /* CustomerDetailPresenter.swift in Sources */,
+				FE32C6502A8B942600224D0D /* CustomerAPI.swift in Sources */,
 				FE95530329668E1A001CE332 /* OrderDetailPresenter.swift in Sources */,
 				FE91B1B6296564900063ED03 /* AppDelegate.swift in Sources */,
 				FEE6ECBE2A86A3CF003DA1F6 /* ProfileDetailProtocols.swift in Sources */,
+				FE32C64E2A8B941B00224D0D /* CustomerItem.swift in Sources */,
+				FE32C6432A8B930100224D0D /* CustomerDetailRouter.swift in Sources */,
 				FEE6ECBC2A86A3A6003DA1F6 /* ProfileDetailInteractor.swift in Sources */,
 				FEE6ECCD2A86A589003DA1F6 /* IncomeTableViewCell.swift in Sources */,
 				FEE6ECC22A86A405003DA1F6 /* ProfileDetailPresenter.swift in Sources */,
+				FE32C6482A8B932C00224D0D /* CustomerDetailProtocols.swift in Sources */,
 				FE95530529668E1A001CE332 /* OrderDetailProtocols.swift in Sources */,
 				FE91B1B8296564900063ED03 /* SceneDelegate.swift in Sources */,
 				FE9552FE29668E1A001CE332 /* OrderListViewController.swift in Sources */,
+				FE32C64A2A8B935C00224D0D /* CustomerDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

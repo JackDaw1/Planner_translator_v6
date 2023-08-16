@@ -9,11 +9,11 @@ class ProfileDetailViewController: UIViewController {
     var editButton: UIButton = UIButton()
     let shareButton = UIButton()
     
-    var presenter: ProfileDetailPresenterProtocol?
-    var enableForEdit: Bool = false {
-        didSet {
-        }
-    }
+//    var presenter: ProfileDetailPresenterProtocol?
+//    var enableForEdit: Bool = false {
+//        didSet {
+//        }
+//    }
     
     private func baseConfigure() {
         view.backgroundColor = UIColor.white
@@ -73,7 +73,7 @@ class ProfileDetailViewController: UIViewController {
         setupConstraints()
         baseConfigure()
         
-        presenter?.viewDidLoad()
+//        presenter?.viewDidLoad()
 
         shareButton.setTitle("Поделиться", for: .normal)
         view.addSubview(shareButton)
@@ -97,24 +97,25 @@ class ProfileDetailViewController: UIViewController {
 
 
 
-extension ProfileDetailViewController: ProfileDetailViewProtocol {
-    
-    func showProfile(_ profile: ProfileItem) {
-        
-        if profile.name != nil {
-            nameTextField.text = profile.name
-        }
-        
-        if profile.contact1 != nil {
-            contact1TextField.text = profile.contact1
-        }
-        
-        if profile.contact2 != nil {
-            contact2TextField.text = profile.contact2
-        }
-        
-    }
-    
-}
+//extension ProfileDetailViewController: ProfileDetailViewProtocol {
+//    
+//    func showProfile(_ profile: ProfileItem) {
+//        
+//        if profile.name != nil {
+//            nameTextField.text = profile.name
+//        }
+//        
+//        if profile.contact1 != nil {
+//            contact1TextField.text = profile.contact1
+//        }
+//        
+//        if profile.contact2 != nil {
+//            contact2TextField.text = profile.contact2
+//        }
+//        
+//    }
+//    
+//}
+
 
 

@@ -86,7 +86,7 @@ class OrderListViewController: UITableViewController {
     
 @objc
 func addTapped(_ sender: Any) {
-    var addVC = AddOrderViewController()
+    let addVC = AddOrderViewController()
     addVC.handler = { [weak self] newOrder in
         guard let self = self else { return }
         self.presenter?.addOrder(newOrder)
