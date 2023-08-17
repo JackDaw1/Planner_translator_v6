@@ -9,7 +9,7 @@ class ProfileDetailViewController: UIViewController {
     var nameTextField: UITextField = UITextField()
     var contact1TextField: UITextField = UITextField()
     var contact2TextField: UITextField = UITextField()
-    
+    var bankCardTextField: UITextField = UITextField()
     var saveButton: UIButton = UIButton()
     let shareButton = UIButton()
     
@@ -37,6 +37,7 @@ class ProfileDetailViewController: UIViewController {
             nameTextField,
             contact1TextField,
             contact2TextField,
+            bankCardTextField,
             saveButton,
             shareButton
             
@@ -64,9 +65,17 @@ class ProfileDetailViewController: UIViewController {
             contact2TextField.heightAnchor.constraint(equalToConstant: 60),
             contact2TextField.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             
-            saveButton.leadingAnchor.constraint(equalTo: contact2TextField.leadingAnchor),
-            saveButton.trailingAnchor.constraint(equalTo: contact2TextField.trailingAnchor),
-            saveButton.topAnchor.constraint(equalTo: contact2TextField.bottomAnchor),
+            bankCardTextField.leadingAnchor.constraint(equalTo: contact2TextField.leadingAnchor),
+            bankCardTextField.trailingAnchor.constraint(equalTo: contact2TextField.trailingAnchor),
+            bankCardTextField.topAnchor.constraint(equalTo: contact2TextField.bottomAnchor),
+            bankCardTextField.heightAnchor.constraint(equalToConstant: 60),
+            bankCardTextField.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
+
+            
+            
+            saveButton.leadingAnchor.constraint(equalTo: bankCardTextField.leadingAnchor),
+            saveButton.trailingAnchor.constraint(equalTo: bankCardTextField.trailingAnchor),
+            saveButton.topAnchor.constraint(equalTo: bankCardTextField.bottomAnchor),
             saveButton.heightAnchor.constraint(equalToConstant: 60),
             saveButton.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             
@@ -83,7 +92,8 @@ class ProfileDetailViewController: UIViewController {
         super.viewDidLoad()
         setupConstraints()
         baseConfigure()
-        
+        self.bankCardTextField.isSecureTextEntry = true
+
         
         
 //        presenter?.viewDidLoad()
@@ -91,6 +101,7 @@ class ProfileDetailViewController: UIViewController {
         nameTextField.text = userDefaults.string(forKey: "name")
         contact1TextField.text = userDefaults.string(forKey: "contact1")
         contact2TextField.text = userDefaults.string(forKey: "contact2")
+        bankCardTextField.text = userDefaults.string(forKey: "bankCard")
 
         saveButton.setTitle("Сохранить", for: .normal)
         view.addSubview(saveButton)
@@ -117,6 +128,7 @@ class ProfileDetailViewController: UIViewController {
         nameTextField.text =  userDefaults.value(forKey: "name") as! String?
         contact1TextField.text = userDefaults.value(forKey: "contact1") as! String?
         contact2TextField.text = userDefaults.value(forKey: "contact2") as! String?
+        bankCardTextField.text = userDefaults.value(forKey: "bankCard") as! String?
 
     }
     
@@ -134,8 +146,9 @@ class ProfileDetailViewController: UIViewController {
           userDefaults.setValue(nameTextField.text, forKey: "name")
           userDefaults.setValue(contact1TextField.text, forKey: "contact1")
           userDefaults.setValue(contact2TextField.text, forKey: "contact2")
-             
-        let alert = UIAlertController(title: "Alert", message: "Data Saved Successfully", preferredStyle: UIAlertController.Style.alert)
+          userDefaults.setValue(bankCardTextField.text, forKey: "bankCard")
+
+        let alert = UIAlertController(title: "", message: "Данные успешно сохранены", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
               self.present(alert, animated: true, completion: nil)
        }
