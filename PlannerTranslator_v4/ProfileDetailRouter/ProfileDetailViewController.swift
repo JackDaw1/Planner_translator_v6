@@ -119,6 +119,8 @@ class ProfileDetailViewController: UIViewController {
         shareButton.backgroundColor = UIColor.lightGray
         
         self.prepopulateData()
+        let QRimage = generateQRCode(from: "Hello, world!")
+//        self.QRView.image = QRimage
 
     }
     
@@ -152,29 +154,20 @@ class ProfileDetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
               self.present(alert, animated: true, completion: nil)
        }
+    
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+        if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
+            QRFilter.setValue(data, forKey: "inputMessage")
+            guard let QRImage = QRFilter.outputImage else {return nil}
+            return UIImage(ciImage: QRImage)
+        }
+        return nil
+    }
+
 }
 
 
-
-//extension ProfileDetailViewController: ProfileDetailViewProtocol {
-//    
-//    func showProfile(_ profile: ProfileItem) {
-//        
-//        if profile.name != nil {
-//            nameTextField.text = profile.name
-//        }
-//        
-//        if profile.contact1 != nil {
-//            contact1TextField.text = profile.contact1
-//        }
-//        
-//        if profile.contact2 != nil {
-//            contact2TextField.text = profile.contact2
-//        }
-//        
-//    }
-//    
-//}
 
 
 
