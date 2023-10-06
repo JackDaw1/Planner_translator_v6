@@ -15,13 +15,13 @@ class OrderAPI {
         
         OrderItem(name: "How to make good apps", price: 32, deadline: "2023-01-01",  customer: "medium", made: false, comment: "111", link: "http"),
         
-        OrderItem(name: "1", price: 300, deadline: "2023-01-08", customer: "proglib", made: true, comment: "111", link: "http"),
+        OrderItem(name: "article 1 2023-01-08", price: 300, deadline: "2023-01-08", customer: "proglib", made: true, comment: "111", link: "http"),
         
-        OrderItem(name: "2", price: 200, deadline: "2023-01-08",  customer: "proglib", made: true, comment: "111", link: "http"),
+        OrderItem(name: "article 2 2023-01-08", price: 200, deadline: "2023-01-08",  customer: "proglib", made: true, comment: "111", link: "http"),
         
-        OrderItem(  name: "3", price: 123, deadline: "2023-01-08", customer: "medium", made: true, comment: "111", link: "http"),
+        OrderItem(  name: "article 3 2023-01-08", price: 123, deadline: "2023-01-08", customer: "medium", made: true, comment: "111", link: "http"),
         
-        OrderItem(name: "4", price: 32, deadline: "2023-01-01",  customer: "medium", made: true, comment: "111", link: "http"),
+        OrderItem(name: "article 4 2023-01-01", price: 32, deadline: "2023-01-01",  customer: "medium", made: true, comment: "111", link: "http"),
         
     ]
     
