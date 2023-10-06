@@ -64,6 +64,9 @@ class IncomeListViewController: UITableViewController {
         return cell
     }
 
+//    var totalSumOfArrays = 0.0
+//    totalSumOfArrays = totalSumOfArrays + Double(sectionsArray[section].sum)!
+    
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if (Double(sectionsArray[section].sum) != 0.0) {
             return "Total income: " + sectionsArray[section].sum
