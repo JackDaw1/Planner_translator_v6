@@ -22,14 +22,31 @@ class ProfileDetailViewController: UIViewController {
     private func baseConfigure() {
         view.backgroundColor = UIColor.white
         
-        nameTextField.placeholder = "Введите ФИО"
-        contact1TextField.placeholder = "Введите логин телеграмма"
-        contact2TextField.placeholder = "Введите почту"
+        nameTextField.placeholder = "Enter your name"
+        contact1TextField.placeholder = "+1 111 111 1111"
+        contact2TextField.placeholder = "email@email.com"
+        bankCardTextField.placeholder = "Bank card"
         
         nameTextField.textColor = UIColor.black
         contact1TextField.textColor = UIColor.black
         contact2TextField.textColor = UIColor.black
+        bankCardTextField.textColor = UIColor.black
         
+        nameTextField.layer.borderWidth = 1.5
+        nameTextField.layer.cornerRadius = 15
+        nameTextField.layer.borderColor = CGColor(red: 0, green: 0, blue: 1, alpha: 0.5)
+        
+        contact1TextField.layer.borderWidth = 1.5
+        contact1TextField.layer.cornerRadius = 15
+        contact1TextField.layer.borderColor = CGColor(red: 0, green: 0, blue: 1, alpha: 0.5)
+        
+        contact2TextField.layer.borderWidth = 1.5
+        contact2TextField.layer.cornerRadius = 15
+        contact2TextField.layer.borderColor = CGColor(red: 0, green: 0, blue: 1, alpha: 0.5)
+    
+        bankCardTextField.layer.borderWidth = 1.5
+        bankCardTextField.layer.cornerRadius = 15
+        bankCardTextField.layer.borderColor = CGColor(red: 0, green: 0, blue: 1, alpha: 0.5)
     }
     
     func setupConstraints() {
@@ -53,40 +70,40 @@ class ProfileDetailViewController: UIViewController {
             nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             nameTextField.heightAnchor.constraint(equalToConstant: 60),
             
+            
             contact1TextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
             contact1TextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
-            contact1TextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor),
+            contact1TextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 5),
             contact1TextField.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             contact1TextField.heightAnchor.constraint(equalToConstant: 60),
             
             contact2TextField.leadingAnchor.constraint(equalTo: contact1TextField.leadingAnchor),
             contact2TextField.trailingAnchor.constraint(equalTo: contact1TextField.trailingAnchor),
-            contact2TextField.topAnchor.constraint(equalTo: contact1TextField.bottomAnchor),
+            contact2TextField.topAnchor.constraint(equalTo: contact1TextField.bottomAnchor, constant: 5),
             contact2TextField.heightAnchor.constraint(equalToConstant: 60),
             contact2TextField.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             
             bankCardTextField.leadingAnchor.constraint(equalTo: contact2TextField.leadingAnchor),
             bankCardTextField.trailingAnchor.constraint(equalTo: contact2TextField.trailingAnchor),
-            bankCardTextField.topAnchor.constraint(equalTo: contact2TextField.bottomAnchor),
+            bankCardTextField.topAnchor.constraint(equalTo: contact2TextField.bottomAnchor, constant: 5),
             bankCardTextField.heightAnchor.constraint(equalToConstant: 60),
             bankCardTextField.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
 
-            
-            
             saveButton.leadingAnchor.constraint(equalTo: bankCardTextField.leadingAnchor),
             saveButton.trailingAnchor.constraint(equalTo: bankCardTextField.trailingAnchor),
-            saveButton.topAnchor.constraint(equalTo: bankCardTextField.bottomAnchor),
+            saveButton.topAnchor.constraint(equalTo: bankCardTextField.bottomAnchor, constant: 15),
             saveButton.heightAnchor.constraint(equalToConstant: 60),
             saveButton.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             
             shareButton.leadingAnchor.constraint(equalTo: saveButton.leadingAnchor),
             shareButton.trailingAnchor.constraint(equalTo: saveButton.trailingAnchor),
-            shareButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor),
+            shareButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: 10),
             shareButton.heightAnchor.constraint(equalToConstant: 60),
             shareButton.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
             
         ])
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +112,6 @@ class ProfileDetailViewController: UIViewController {
         self.bankCardTextField.isSecureTextEntry = true
 
         
-        
 //        presenter?.viewDidLoad()
 
         nameTextField.text = userDefaults.string(forKey: "name")
@@ -103,7 +119,7 @@ class ProfileDetailViewController: UIViewController {
         contact2TextField.text = userDefaults.string(forKey: "contact2")
         bankCardTextField.text = userDefaults.string(forKey: "bankCard")
 
-        saveButton.setTitle("Сохранить", for: .normal)
+        saveButton.setTitle("Save", for: .normal)
         view.addSubview(saveButton)
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for: UIControl.Event.touchUpInside)
         saveButton.setTitleColor(.black, for: .normal)
@@ -111,7 +127,7 @@ class ProfileDetailViewController: UIViewController {
         
 //        saveButton.addTarget(self, action: #selector(save), for: UIControl.Event.touchUpInside)
         
-        shareButton.setTitle("Поделиться", for: .normal)
+        shareButton.setTitle("Share contact", for: .normal)
         view.addSubview(shareButton)
         //shareButton.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
@@ -119,7 +135,7 @@ class ProfileDetailViewController: UIViewController {
         shareButton.backgroundColor = UIColor.lightGray
         
         self.prepopulateData()
-        let QRimage = generateQRCode(from: "Hello, world!")
+        //let QRimage = generateQRCode(from: "Hello, world!")
 //        self.QRView.image = QRimage
 
     }
@@ -136,7 +152,7 @@ class ProfileDetailViewController: UIViewController {
     
 
     @objc func didTapShareButton(_ sender: Any) {
-        let textMyContacts = "Мои контакты: \n"
+        let textMyContacts = "My contacts"
         let objectsToShare: [Any] = [textMyContacts, nameTextField.text, contact1TextField.text, contact2TextField.text]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = sender as! UIView
@@ -150,7 +166,7 @@ class ProfileDetailViewController: UIViewController {
           userDefaults.setValue(contact2TextField.text, forKey: "contact2")
           userDefaults.setValue(bankCardTextField.text, forKey: "bankCard")
 
-        let alert = UIAlertController(title: "", message: "Данные успешно сохранены", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "", message: "Data saved successfully", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
               self.present(alert, animated: true, completion: nil)
        }

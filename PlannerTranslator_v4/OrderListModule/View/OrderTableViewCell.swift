@@ -22,14 +22,12 @@ class OrderTableViewCell: UITableViewCell {
         self.contentView.addSubview(nameOfArticleLabel)
         
         NSLayoutConstraint.activate([
-            
             nameOfArticleLabel.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: 10),
             nameOfArticleLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
             nameOfArticleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
                                                       constant: 5),
             nameOfArticleLabel.heightAnchor.constraint(equalToConstant: 40),
             nameOfArticleLabel.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor),
-            
         ])
     }
     

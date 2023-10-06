@@ -26,22 +26,22 @@ class MainTabBarController: UITabBarController {
         viewControllers = [
             createNavController(
                 for: OrderListRouter.createOrderListModule(),
-                title: "Заказы",
+                title: "Orders",
                 image: UIImage(systemName: "list.bullet.clipboard")!
             ),
             createNavController(
                 for: CustomerListRouter.createCustomerListModule(),
-                title: "Заказчики",
+                title: "Customers",
                 image: UIImage(systemName: "person.2")!
             ),
             createNavController(
                 for: IncomeListRouter.createIncomeListModule(),
-                title: "Смета",
+                title: "Incomes",
                 image: UIImage(systemName: "chart.line.uptrend.xyaxis")!
             ),
             createNavController(
                 for: ProfileDetailViewController(),
-                title: "Профиль",
+                title: "Profile",
                 image: UIImage(systemName: "person.crop.circle")!
             )
         ]

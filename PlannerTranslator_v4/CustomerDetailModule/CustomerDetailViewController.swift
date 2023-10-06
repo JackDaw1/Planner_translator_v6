@@ -93,10 +93,10 @@ class CustomerDetailViewController: UIViewController {
 extension CustomerDetailViewController: CustomerDetailViewProtocol {
     
     func showCustomer(_ customer: CustomerItem) {
-        titleLabel.text = "Компания: " + customer.name
-        infoLabel.text = "Контактное лицо: " + (customer.info ?? "")
-        contact1Label.text = "Контакт 1: " + (customer.contact1 ?? "")
-        contact2Label.text = "Контакт 2: " + (customer.contact2 ?? "")
+        titleLabel.text = "Company: " + customer.name
+        infoLabel.text = "Contact person: " + (customer.info ?? "")
+        contact1Label.text = "Contact 1: " + (customer.contact1 ?? "")
+        contact2Label.text = "Contact 2: " + (customer.contact2 ?? "")
     }
     
 }

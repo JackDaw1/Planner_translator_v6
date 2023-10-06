@@ -12,11 +12,10 @@ class AddCustomerViewController: UIViewController {
     
     private func baseConfigure() {
         view.backgroundColor = UIColor.white
-        
-        nameTextField.placeholder = "Название компании"
-        infoTextField.placeholder = "Контактное лицо"
-        contact1TextField.placeholder = "Контакт 1"
-        contact2TextField.placeholder = "Контакт 2"
+        nameTextField.placeholder = "Company"
+        infoTextField.placeholder = "КContact person"
+        contact1TextField.placeholder = "Contact 1"
+        contact2TextField.placeholder = "Contact 2"
         saveButton.setTitleColor(UIColor.black, for: UIControl.State.normal)
         saveButton.setTitleColor(UIColor.gray, for: UIControl.State.selected)
         

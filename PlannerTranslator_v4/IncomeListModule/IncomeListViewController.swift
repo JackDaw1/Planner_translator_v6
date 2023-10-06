@@ -43,6 +43,11 @@ class IncomeListViewController: UITableViewController {
         sectionsArray.count
     }
     
+//    //настраиваем строки секции (в ней хранятся 1 хедер и множество ячеек (строк))
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return sectionsArray[section].incomes.count
+//    }
+    
     //настраиваем строки секции (в ней хранятся 1 хедер и множество ячеек (строк))
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sectionsArray[section].incomes.count
@@ -61,13 +66,16 @@ class IncomeListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if (Double(sectionsArray[section].sum) != 0.0) {
-            return "Общий доход: " + sectionsArray[section].sum
+            return "Total income: " + sectionsArray[section].sum
         }
-        else
-        {
+        else {
             return nil
         }
     }
+    
+
+        
+    
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
